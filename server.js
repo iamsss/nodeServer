@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4200;
 
 app.set('view engine', 'hbs'); // set configuration for views
 
@@ -42,6 +42,14 @@ app.get('/', (req, res) => res.render(
         
         pageTitle: 'About Page',
         greeting: 'Welcome to My Home Page'
+    }
+));
+
+app.get('/contact', (req, res) => res.render(
+    'contact.hbs',{
+        
+        pageTitle: 'Contact Page',
+        greeting: 'Call us at 7461885908'
     }
 ));
 
