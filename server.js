@@ -4,6 +4,8 @@ const hbs = require('hbs');
 const fs = require('fs');
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.set('view engine', 'hbs'); // set configuration for views
 
 // app.get('/', (req, res) => res.send('<h1>Hello</h1> Saurav'))
@@ -66,4 +68,4 @@ app.get('/bad', (req, res) => res.send(
     '<h2>Error Page</h2>'
 ));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
